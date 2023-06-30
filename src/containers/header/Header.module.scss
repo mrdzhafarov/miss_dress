@@ -1,0 +1,182 @@
+.mainBlock {
+    height: 90px;
+    width: 100%;
+    background-color: #ECCFB5;
+    padding-top: 10px;
+    position: relative;
+
+  a {
+    color: #372e24;
+  }
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+
+}
+
+.mainBlock_navbar {
+    display: flex;
+    list-style-type: none;
+    max-width: 626px;
+    width: 35vw;
+    justify-content: space-between;
+
+    font-weight: 400;
+    font-size: 20px;
+    min-width: 471px;
+    margin-right: 10px;
+    margin-left: 30px;
+
+  li {
+    cursor: pointer;
+  }
+  li:hover {
+    font-weight: 500;
+  }
+}
+
+
+.icons {
+    max-width: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    min-width: 122px;
+
+    img{
+        cursor: pointer;
+        width: 25px;
+        height: 25px;
+
+        min-height: 20px;
+        min-width: 20px;
+    }
+    .activeIcon{
+        filter: invert(62%) sepia(21%) saturate(5392%) hue-rotate(82deg) brightness(93%) contrast(85%);
+
+    }
+
+}
+
+.shopping_img_count{
+position: relative;
+span{
+    position: absolute;
+    background:white;
+    display: inline-block;
+    min-width: 15px;
+    min-height: 15px;
+    border-radius:50%;
+    top:-5px;
+    right:131px;
+    text-align: center;
+    line-height: 15px;
+}
+}
+
+.burgerMenu{
+    display: none;
+}
+
+
+.menuModal{
+    position: absolute;
+    z-index: 100;
+    width: 241px;
+    height: 250px;
+    background: #F1DAC5;
+    padding-left: 13px;
+    li{
+        list-style-type: none;
+        margin-top:20px;
+        color:#372E24;
+    }
+}
+.menuModalOpen{
+animation: modalOpen 0.5s ;
+@keyframes modalOpen {
+    0%{
+       margin-left: -241px;
+    }
+    100%{
+        margin-left: 0px;
+    }
+}
+}
+
+.menuModalClose{
+    animation: modalClose 0.5s ;
+    @keyframes modalClose {
+        0%{
+           margin-left: 0px;
+        }
+        100%{
+            margin-left: -241px;
+        }
+    }
+}
+
+.activeNavbar{
+    font-weight: 500;
+}
+
+
+
+@media(max-width:1300px){
+    .mainBlock{
+        padding-left: 13px;
+        padding-right: 13px;
+
+    }
+}
+
+@media(max-width:900px){
+
+    .mainBlock_navbar{
+        font-size: 16px;
+        min-width: 400px;
+    }
+
+    .icons{
+        min-width: 100px;
+        max-width: 150px;
+        img{
+            height: 20px;
+            width: 20px;
+        }
+    }
+
+
+}
+
+@media(min-width:767px){
+
+    .menuModal{
+        display: none;
+    }
+}
+
+@media(max-width:767px){
+    .mainBlock{
+        height: 80px;
+        padding-top: 0px;
+    }
+
+    .burgerMenu{
+        display: block;
+        margin-right: 2vw;
+    }
+
+    .mainBlock_navbar{
+        display: none;
+    }
+    .burgerMenu_logo{
+        display: flex;
+    }
+}
